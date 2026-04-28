@@ -1,0 +1,166 @@
+:root {
+    --color-primario: #ff6347;    /* Tomate */
+    --color-fondo: #f8f9fa;
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --color-borde: #ddd;
+    --color-focus: #ff4500;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--color-blanco);
+    padding: 1rem 5%;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+h1 {
+    color: var(--color-primario); 
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primario);
+}
+
+/* Layout Principal */
+main {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+aside {
+    background: var(--color-blanco);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: var(--sombra);
+}
+
+/* Buscador */
+.buscador-form {
+    display: flex;
+    align-items: flex-end; /* Alinea el botón con el input */
+    gap: 15px;
+    background-color: var(--color-blanco);
+    padding: 25px;
+    border: 2px solid var(--color-borde); /* Borde visible */
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+}
+
+.btn-buscar {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    height: 45px; 
+    display: inline-block; 
+}
+
+button:hover {
+    background-color: var(--color-focus);
+}
+
+/* Grilla de Productos (Dinámica) */
+#contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+article {
+    background-color: var(--color-blanco);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s;
+    border: 1px solid var(--color-borde);
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+article h3 {
+    color: var(--color-primario);
+    margin: 15px 0 10px;
+}
+
+.precio-destacado {
+    font-size: 1.4rem;
+    color: #27ae60; 
+    display: block;
+    margin: 10px 0;
+}
+.cart-item button {
+    border-radius: 50%; /* Los hace circulares */
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--color-primario);
+    text-decoration: none;
+}

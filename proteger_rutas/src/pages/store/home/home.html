@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Store - Tienda</title>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header>
+        <h1>Food Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">🏡 Inicio</a></li>
+                <li><a href="#">📝 Mis pedidos</a></li>
+                <li><a href="../cart/cart.html">🛒 Carrito</a></li>
+                <li><button id="logout-btn" class="btn-buscar" style="height: auto; padding: 5px 15px;">🚪 Cerrar Sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="display: flex; gap: 20px; align-items: flex-start;">
+            <!-- El Aside ya tiene estilo en tu CSS -->
+            <aside style="flex: 1;">
+                <h2>Categorías</h2>
+                <ul id="lista-categorias" style="list-style: none; padding: 0;">
+                    <!-- Se llena dinámicamente -->
+                </ul>
+            </aside>
+
+            <section style="flex: 3;">
+                <form class="buscador-form" id="form-busqueda">
+                    <input type="text" placeholder="Ej: Hamburguesas" id="input-busqueda">
+                    <button type="submit" class="btn-buscar"> 🔍 Buscar</button>
+                </form>
+
+                <h2>Productos Destacados</h2>
+                <!-- ID #contenedor-productos de tu CSS aplicado -->
+                <div id="contenedor-productos">
+                    <!-- client.ts debe insertar elementos <article> aquí -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contacto</h3>
+        <p>Email: <a href="mailto:info@foodstore.com">info@foodstore.com</a></p>
+        <p>Teléfono: <a href="tel:+123456789">+123 456 789</a></p>
+        <p>&copy; 2026 food store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="./home.ts"></script>
+</body>
+</html>
